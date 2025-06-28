@@ -1,0 +1,41 @@
+---
+title: "Simulating dice rolls: what variation can we expect from perfectly balanced dice?"
+author: "Gertjan Verhoeven"
+date: '2023-03-07'
+output: pdf_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(tidyverse)
+```
+
+## Simulating dice rolls
+
+We write code that simulates throwing the die `n_rolls` times. There are `n_sides` , and each side has equal probability, i.e. it is perfectly balanced.
+
+```{r fig.height = 6,fig.width= 4}
+set.seed(1234567)
+
+n_rolls <- 1000
+n_sides <- 20
+
+for (run in 1:5){
+  dfs <- data.frame(run = run, observed_side = sample(1:n_sides, size = n_rolls, replace = T, prob = rep(1/n_sides, n_sides)))
+  if(run == 1)
+    df <- dfs
+  else{
+    df <- rbind(df, dfs)
+  }
+}
+
+df <- df %>%
+  group_by(observed_side, run) %>%
+  summarise(cnt = n()/(n_rolls/n_sides))
+
+ggplot(df, aes(x = observed_side, y = cnt)) +
+  geom_col() +
+  facet_wrap(~ run, ncol = 1) + 
+  geom_hline(yintercept = c(0.5, 1), linetype = "dashed")
+```
+

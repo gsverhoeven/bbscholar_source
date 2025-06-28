@@ -1,0 +1,105 @@
+---
+title: "Visualizing Blood Bowl Gnome roster development during League play"
+author: "Gertjan Verhoeven"
+date: '2025-04-29'
+summary: In the board game Blood Bowl, coaches develop their teams over a series of matches. In this post, we use the **fumbbl_replays** Python package to plot and analyze Gnome team development choices during league play.
+slug: fumbbl-league-team-development
+draft: no
+categories: 
+- Data science
+- Blood Bowl
+tags:
+- Python
+- Pandas
+baseurl: https://gsverhoeven.github.io
+header:
+  image: headers/bb_gnome_banner.png
+  preview: no
+---
+
+
+
+<p><em>This blog post uses the <code>fumbbl_replays</code> Python package.</em>
+<em>To install the <code>fumbbl_replays</code> python package, follow the instructions at the <a href="https://github.com/gsverhoeven/fumbbl_replays">fumbbl_replays Github repository</a>.</em></p>
+<p>This analysis focuses on team development in League play.
+Last season I played Gnomes in our local league (<a href="https://tourplay.net/en/blood-bowl/big-season-5/">B.I.G. league in Hilversum, Netherlands</a>), and was curious how to best develop the team.</p>
+<p>So I did some data analysis.
+On FUMBBL, a “meta competition” is organized called Black Box Trophy (BBT).
+In the Black Box Trophy, teams start off with 1M gold, and play 15 matches against random opponents in the Black box division.
+It uses the rule book team development rules (earning SPP, leveling up players etc).
+When the meta-event ends (currently after 4 months), the best performing coaches are declared winner.</p>
+<p>This appears to be a high stakes competitive BB League environment, perfect to learn what choices pro players make to optimally develop their teams.</p>
+<p><strong>I decided to look at the top performing Gnome teams from the last three BBT seasons</strong>.</p>
+<p>For this analysis, the starting point is the <code>team_id</code>.
+This is part of the url of the team on FUMBBL: <a href="https://fumbbl.com/p/team?id=1177218" class="uri">https://fumbbl.com/p/team?id=1177218</a></p>
+<p>These teams and their coaches stood out based on their win rates:</p>
+<ul>
+<li>BBT 11: “We do gnomes” by coach Elyod (10/2/3 WDL) (<a href="https://fumbbl.com/t/1177218" class="uri">https://fumbbl.com/t/1177218</a>)</li>
+<li>BBT 11: “You’ve been tricked” by coach Heymaiya (8/3/4 WDL) (<a href="https://fumbbl.com/t/1175080" class="uri">https://fumbbl.com/t/1175080</a>)</li>
+<li>BBT 12: “Lawn Bullies” by coach Candlejack (10/4/1 WDL) (<a href="https://fumbbl.com/t/1193897" class="uri">https://fumbbl.com/t/1193897</a>)</li>
+<li>BBT 13: “Gnom Gnom” by coach Norn (9/5/1 WDL) (<a href="https://fumbbl.com/t/1211512" class="uri">https://fumbbl.com/t/1211512</a>)</li>
+<li>BBT 13: “Vengeance Most fowl” by coach Heymaiya (10/1/4 WDL) (<a href="https://fumbbl.com/t/1210291" class="uri">https://fumbbl.com/t/1210291</a>)</li>
+</ul>
+<p>I wrote a function <code>fetch_team_development_data(team_id)</code> to fetch the rosters from the first 15 replays for each team.
+We can then plot this data to track the team development using the function <code>make_team_development_plot()</code>.</p>
+<pre class="python"><code>import fumbbl_replays as fb
+
+team_ids = [1177218, 1175080, 1193897, 1211512, 1210291]
+
+for team_id in team_ids:
+    res = fb.fetch_team_development_data(team_id)
+    fb.make_team_development_plot(res)</code></pre>
+<pre><code>...............</code></pre>
+<p><img src="/post/2025-04-29_application_team_league_development_files/application_team_league_development_2_1.png" /></p>
+<pre><code>...............</code></pre>
+<p><img src="/post/2025-04-29_application_team_league_development_files/application_team_league_development_2_3.png" /></p>
+<pre><code>...............</code></pre>
+<p><img src="/post/2025-04-29_application_team_league_development_files/application_team_league_development_2_5.png" /></p>
+<pre><code>.............</code></pre>
+<p><img src="/post/2025-04-29_application_team_league_development_files/application_team_league_development_2_7.png" /></p>
+<pre><code>...............</code></pre>
+<p><img src="/post/2025-04-29_application_team_league_development_files/application_team_league_development_2_9.png" /></p>
+<div id="what-can-we-learn-from-how-these-gnome-teams-developed" class="section level1">
+<h1>What can we learn from how these Gnome teams developed?</h1>
+<p>What starting roster is used?
+How are the SPP spent? What player builds do we see?</p>
+<div id="starting-roster" class="section level2">
+<h2>Starting roster</h2>
+<p>The Gnome roster including skill access and player cost can be found at the <a href="https://bbtactics.com/gnome-teams/">Blood Bowl Tactics website</a>.
+As a starting roster, all five rosters start with 6 linemen and all positionals, for 14 players.
+Variation is in number of rerolls (Three or four), and having an Apothecary (yes or no).</p>
+</div>
+<div id="foxes" class="section level2">
+<h2>Foxes</h2>
+<p>Foxes are the stars of the team, collecting SPP by scoring TDs.
+<strong>+MA</strong> is by far the most popular. <strong>Sure feet</strong> is also an option, to save on rerolls for the GFIs.</p>
+</div>
+<div id="treemen" class="section level2">
+<h2>Treemen</h2>
+<p>Treemen skill up quickly by all those 3-die block casualties and the occassional superb TTM.
+<strong>Guard</strong> is favorite. Less common options are <strong>+MA</strong>, <strong>Pro</strong> and <strong>Defensive</strong>.
+Candlejack managed to get a second skill on both after 12 and 14 games, <strong>+MA</strong> and <strong>Block</strong>.</p>
+<p><strong>Defensive</strong> was a surprise for me. It turns off <strong>Guard</strong> during the opponents turn.
+It makes it more difficult for opponents to bring in enough assists to knock down the tree.
+This is strong when the trees form part of the cage formation, in combination with Beastmasters closeby that come with <strong>Guard</strong>.</p>
+</div>
+<div id="linemen" class="section level2">
+<h2>Linemen</h2>
+<p>For linemen, we see mostly saving up (MVP, TTM TDs?) for <strong>Dodge</strong>. There is one lineman with a second skill, <strong>diving tackle</strong>, to serve as a marking player.
+Overall, it appears difficult to skill up linemen, since they do not live long enough.
+Of the 6 linemen in the starting roster, without <strong>Dodge</strong> only 1 or 2 survive after 15 games.</p>
+</div>
+<div id="illusionists" class="section level2">
+<h2>Illusionists</h2>
+<p>Same as the line gnomes, lifespan issues. After they gain <strong>Dodge</strong> protection, <strong>Leader</strong> for an extra reroll.
+Coach Elyod randomed pass skills, possibly in search of a cheap leader skill.</p>
+</div>
+<div id="beastmasters" class="section level2">
+<h2>Beastmasters</h2>
+<p>Beastmasters have higher AV than the rest of the gnomes, but are more often where the action is, using their guard to assist in blocks, or protecting the ball carrier.
+So as with the other gnomes, they want <strong>Dodge</strong> first for more protection. After that <strong>Sidestep</strong>.</p>
+<p>I had great fun painting up and playing Gnomes, so give em a try!</p>
+<p><em>Want more BB Gnome stuff? check out <a href="https://discord.gg/f6PPj5nsVg">the Gnome Counties Discord server</a>.</em>
+<em>Enjoy the company of over one hundred Gnome coaches discussing and sharing all things Gnomey!</em></p>
+</div>
+</div>

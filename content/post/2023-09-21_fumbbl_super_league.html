@@ -1,0 +1,83 @@
+---
+title: 'The Super League: Tournament Blood Bowl online'
+author: "Gertjan Verhoeven"
+date: '2023-09-21'
+summary: Yet another Blood Bowl post! This one is to introduce the Super League, the
+  ultimate tournament-style Blood Bowl available online.
+slug: blood-bowl-super-league
+draft: no
+categories:
+- Blood Bowl
+- Statistics
+tags:
+- R
+- ggplot2
+baseurl: https://gsverhoeven.github.io
+header:
+  image: headers/bb_heatmap_banner.png
+  preview: no
+---
+
+
+
+<p><em>(Photo by <a href="https://twitter.com/erikcats">Erik Cats</a>)</em></p>
+<p>Yet another Blood Bowl post! If you don’t know about Blood Bowl and/or FUMBBL, See my <a href="https://gsverhoeven.github.io/categories/blood-bowl/">previous blog posts on Blood Bowl</a> for more background and stats.</p>
+<p>This one is to introduce the Super League, where top (and not so top) coaches compete with each other online on FUMBBL. The Super League is a system of interconnected leagues, in a pyramid-like system. This is not uncommon in sports, a well known example is the English Football league system, also called the “football pyramid”.
+The creator and tireless promotor of this league, the infamous <strong>Tripleskull</strong> from Denmark, asked me to do some data analysis on the SL, with this blog as a result.</p>
+<p>How does it work? Each season coaches play a match against all the other coaches in their division / tier (“single round-robin”). At the end of the season coaches are promoted to a higher division, remain, or are relegated to a lower division, based on how well they did. New coaches have to start in the lowest division and work their way to the top. The highest division is called the “Premier League”, where some of the world’s best Blood Bowl coaches compete for the crown (well ring in fact, designed and 3D printed by <strong>Flashman1234</strong>).</p>
+<p><img src="/post/2023-09-21_fumbbl_super_league_files/Strider.jpeg" /></p>
+<p>In a post on Discord, current head admin <strong>Storr</strong> explains the design of the Super League:
+<!-- https://discord.com/channels/1082212787796836383/1083357378453442610/1133125373903777853 --></p>
+<p><em>The Super League is designed as a tiered league with a pyramid structure to allow coaches to play against opponents of their own level. This is done intentionally in contrast to the TSD*, where we have completely random divisions each season with a playoff at the end. We do have a rather high number of relegations and promotions to allow everyone to pass rather quickly to the tier they “should” be in, but we need to try to keep the balance between the two. I know it is a bit unfortunate to join now and having to take the long way to the top, but that’s what it is in a tiered league. There will not be a reset in the Super League, as that would be against the very nature and idea of the league. There is, however, the option to make the lower tiers a bit wider, as we don’t follow through with the pyramid structure through all tiers at the moment. The reason for that is that the league grew quite large rather quick, and a decision was made to implement the divisional structure as it is now, possibly because it fit the participant numbers well (i.e. “historical reasons). We will think about expanding the pyramid structure, especially if the league grows even further, as we also don’t want to handle a giant swiss division at the bottom (ask LemonheadWallenstein why), but I won’t make any promises.</em></p>
+<p><em>(*TackleZone Star Division, another competitive league/tournament on FUMBBL)</em></p>
+<p>At this point we should mention <strong>TheFear</strong>, who together with <strong>TripleSkull</strong> started it all, and was sole admin for Season 0 and 1.
+His historic blog post on FUMBBL introducing the Super League can be found <a href="https://fumbbl.com/p/blog&amp;c=TheFear&amp;id=24149">here on FUMBBL</a>.</p>
+<p>To illustrate the (somewhat) pyramid-like structure of the SL I made a schematic:</p>
+<p><img src="/post/2023-09-21_fumbbl_super_league_files/pyramid.png" /></p>
+<p>Each rectangular block is a division with 8 coaches, except for the lowest division, which uses a Swiss pairing system (i.e. coaches are initially randomly matched and after that are matched based on their performance so-far). At the time of writing the league is going into its third season, with 188 coaches competing.</p>
+<p><img src="/post/2023-09-21_fumbbl_super_league_files/figure-html/unnamed-chunk-2-1.png" width="672" /></p>
+<p>A “season 0” Swiss tournament was played to fill the “empty” pyramid with coaches according to their performance in S0. This filled the top half of the pyramid, after that new coaches were divided randomly across the remaining divisions (D3 and D4), hence this season was nicknamed “the season of shortcuts” by <strong>Lorebass</strong>. In November 2022 Season 1 kicked off. Going into S2 (march 2023) and now S3 (sept 2023), the system is working as intended with coaches moving through the pyramid via promotion and relegation.</p>
+<div id="ranking-the-stars" class="section level1">
+<h1>Ranking the stars!</h1>
+<p>So what can be learned from two seasons of Super League competition play?
+As this is about competition, let’s try and create a ranking over who did best over those two seasons.</p>
+<p><img src="/post/2023-09-21_fumbbl_super_league_files/rel_pro_coaches.png" style="width:100.0%" />
+Here we use the ranking primarily to summarise / show part of the data.
+In creating the ranking, I made several choices that can be considered arbitrary, I mention these in parentheses.</p>
+<p>The ranking is constructed as follows:
+Main idea is that competing in the Premier League is valued the most (<em>Arbitrary Decision #1, division level as main score</em>). This puts <strong>Strider84</strong> and <strong>RolexWL</strong> firmly at the top as the only coaches that ended up, and managed to stayed in the Premier League for all three seasons. Here, <strong>Strider84</strong> is clearly number one, since he also managed to win the PL (<em>Arbitrary Decision #2, trophies as first tie breaker</em>).
+Next we have a block of six coaches that played twice in the PL, and once in the league directly below (Championship A/B).
+Using trophies as a tie breaker puts <strong>Purplegoo</strong> in third place with two trophies, and <strong>Storr</strong> in fourth place with one trophy.</p>
+<p>How to rank the remaining four coaches?
+For this I looked at placement within the division, averaged over S1 and S2. This puts <strong>Stimme</strong> in fifth place, as his average placement was 2. (<em>Arbitrary decision #3, average placement over season disregarding division level as second tie breaker</em>).
+Finally I cut the list at a threshold of score 12 or less (I award 6 points for playing one season in the PL, 5 points for a single season in the CH etc).
+This resulted in one Dutch Coach making the list, and that honour goes to <strong>Schwifty</strong>, who managed to accomplish this playing Nurgle! Respect.</p>
+</div>
+<div id="rising-to-the-top" class="section level1">
+<h1>Rising to the top</h1>
+<p>As all new coaches have to start at the bottom (with Season 1 being an exception where coaches could be randomly placed in D2, halfway in the pyramid), we can change perspective. Let’s have a look at ALL coaches who in the upcoming season (S3) play in the top two divisions and how they got there.
+The top two divisions are Premier League and Championship A/B, containing 24 coaches:</p>
+<p><img src="/post/2023-09-21_fumbbl_super_league_files/s3_top_coaches.png" style="width:100.0%" />
+In the Premier League, we see two new names: <strong>Junior84</strong> and <strong>siggi</strong>. They rose with lightning speed to the top division, and show what is possible for the rest of us. Good luck up there competing with the best!
+In the Championship A/B division, we have a group of five coaches that steadfastly marched their way up from Division 2.
+Here we have a Dutch coach as well, go <strong>Edwin</strong>!</p>
+</div>
+<div id="what-teams-do-successful-coaches-pick" class="section level1">
+<h1>What teams do successful coaches pick?</h1>
+<p>Note that the league placing belongs to the <strong>coach</strong>. Coaches can swap teams (between seasons) and retain their ranking.
+So what teams did successful coaches pick in Season 2?</p>
+<p>In season 2 the World Cup ruleset was used, with one exception: no star players.
+Now, we already know the World Cup win rates by team, thanks to Mike Davies and his awesome Tableau stats site.
+Here I show the top 10 teams with the highest win rate at the World Cup:</p>
+<p><img src="/post/2023-09-21_fumbbl_super_league_files/wc_winrates.png" /></p>
+<p>Top five teams in the WC ruleset are Underworld, Dark Elf, Amazon, Lizardmen and Shambling Undead.
+Indeed, the same teams did well in the Super League:</p>
+<p><img src="/post/2023-09-21_fumbbl_super_league_files/successful_coach_team_picks.png" style="width:100.0%" /></p>
+<p>Here I looked at teams from Coaches that played in the top three divisions in Season 2, and managed to either remain in their league, or that got promoted to a higher league.</p>
+<p>Interestingly, two coaches managed to do well with <strong>Imperial Nobility</strong>, and also low tier teams such as <strong>Nurgle</strong>, <strong>Chaos Chosen</strong> and <strong>Black Orc</strong> has some degree of success. Note that the absence of Old World Alliance in the Super League is likely because its success in the World Cup depended heavily on Star players.</p>
+</div>
+<div id="final-remarks" class="section level1">
+<h1>Final remarks</h1>
+<p>If you’re interested in following along head over to Discord or FUMBBL. If you would like to join you have to wait a few months, Season 4 will likely start in Feb/March 2024.
+If you’re interested in the data analysis itself, both data and R code are available on my GitHub, the repository <a href="https://github.com/gsverhoeven/fumbbl_super_league">fumbbl_super_league</a> is a good place to start.</p>
+</div>
