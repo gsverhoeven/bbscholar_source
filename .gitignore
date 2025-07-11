@@ -1,0 +1,25 @@
+# IDEs
+.idea/
+
+# Hugo
+resources/
+public/
+.Rproj.user
+*__pycache__*
+.ipynb_checkpoints
+content/post/fumbbl_blogpost_src/data/W_Race_Record_Full_Data_data_bb2020.csv
+content/post/fumbbl_blogpost_src/data/W_Race_Record_Full_Data_data.csv
+content/post/fumbbl_blogpost_src/data/NAF/*
+#content/post/rf_rfe_post/cache/*
+content/post/fumbbl_blogpost_src/match_html_files/*
+/content/post/rf_rfe_post/old/*
+/content/post/rf_rfe_post/fits/*
+/content/post/2022-01-03-random_forest_overfitting.html
+content/post/fumbbl_cluster/*
+content/post/fumbbl_rosters_post/*
+!content/post/fumbbl_rosters_post/*.ods
+!content/post/fumbbl_rosters_post/*.Rmd
+content/post/fumbbl_rosters_post/bb_rosters.ods
+content/post/fumbbl_rosters_post/skill_colors.ods
+!content/post/fumbbl_rosters_post/roster_book.pdf
+content/post/2023-11-05-wireguard_vpn.Rmd

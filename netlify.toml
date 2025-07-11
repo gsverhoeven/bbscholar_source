@@ -1,9 +1,10 @@
 [build]
+  ignore = "exit 0"
   command = "hugo --gc --minify -b $URL"
   publish = "public"
 
 [build.environment]
-  HUGO_VERSION = ".0"
+  HUGO_VERSION = "0.63.0"
   HUGO_ENABLEGITINFO = "true"
 
 [context.production.environment]

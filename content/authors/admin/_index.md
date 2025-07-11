@@ -1,6 +1,6 @@
 ---
 # Display name
-name: Gertjan Verhoeven
+#name: Gertjan Verhoeven
 
 # Username (this should match the folder name)
 authors:
@@ -10,28 +10,16 @@ authors:
 superuser: true
 
 # Role/position
-role: Data Scientist / Policy Advisor
+#role: Data Scientist / Policy Advisor
 
 # Organizations/Affiliations
-organizations:
-- name: Dutch Healthcare Authority
-  url: "https://www.nza.nl"
+#organizations:
+#- name: Dutch Healthcare Authority
+#  url: "https://www.nza.nl"
 
 # Short bio (displayed in user profile at end of posts)
-bio: Gertjan Verhoeven is a research scientist currently at the Dutch Healthcare Authority, working on health policy and statistical methods. Follow me on [Twitter](https://twitter.com/GertjanVerhoev1) or [Mastodon](https://bayes.club/@gsverhoeven) to receive updates on new blog posts. Statistics posts using R are featured on [R-Bloggers](https://www.r-bloggers.com).
+bio: Gertjan Verhoeven likes to play and learn about Blood Bowl. New posts are announced in the "Blood Bowl Community" Facebook group.
 
-interests:
-- Bayesian Statistics
-- Health Policy
-- Causal Inference
-- Machine Learning
-
-education:
-  courses:
-  - course: PhD in Biophysics
-    institution: Leiden University
-    year: 2008
- 
 
 # Social/Academic Networking
 # For available icons, see: https://sourcethemes.com/academic/docs/page-builder/#icons
@@ -71,7 +59,10 @@ email: ""
 user_groups:
 - Researchers
 - Visitors
+
+#I am a research scientist at the Dutch Healthcare Authority and extramural fellow at Tilburg University, working on health policy and statistical methods. 
+#I have a background in experimental physics, with a PhD in Biophysics.
+
 ---
 
-I am a research scientist at the Dutch Healthcare Authority and extramural fellow at Tilburg University, working on health policy and statistical methods. 
-I have a background in experimental physics, with a PhD in Biophysics.
+Gertjan Verhoeven likes to play and learn about Blood Bowl. New posts are announced in the "Blood Bowl Community" Facebook group.
