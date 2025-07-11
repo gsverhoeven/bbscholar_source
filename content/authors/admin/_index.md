@@ -64,5 +64,6 @@ user_groups:
 #I have a background in experimental physics, with a PhD in Biophysics.
 
 ---
-
-Gertjan Verhoeven likes to play and learn about Blood Bowl. New posts are announced in the "Blood Bowl Community" Facebook group.
+I like to learn about the board game Blood Bowl.
+New posts are announced in the "Blood Bowl Community" Facebook group.
+![logo](img/headers/bb_scholar.png)
