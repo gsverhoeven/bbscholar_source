@@ -1,0 +1,69 @@
+---
+title: "Third Season team popularity"
+author: "Gertjan Verhoeven"
+date: "2026-01-24"
+summary: Blood Bowl Third Season (aka BB2025) is here! In this post, I look at tournament
+  data from Tourplay and NAF to check what teams are popular in BB2025.
+slug: "first-bb2025-tournaments"
+draft: false
+categories:
+- Data science
+- Blood Bowl
+tags:
+- Python
+- Selenium
+baseurl: https://gsverhoeven.github.io
+header:
+  image: headers/bb_gnome_banner.png
+  preview: false
+---
+
+
+
+<p>Blood Bowl Third Season (aka BB2025) is here!</p>
+<p>In this post, I look at tournament data from Tourplay and NAF to check what teams are popular in BB2025.</p>
+<div id="a-new-edition-of-blood-bowl" class="section level1">
+<h1>A new edition of Blood Bowl</h1>
+<p>So what does BB2025 bring? A completely new team (<strong>Bretonnian</strong>), and lots of (small) changes, while keeping the core of the game intact.
+The NAF already documented (and sometimes clarified) a long list of <a href="https://www.thenaf.net/naf-recommendations-and-clarifications-for-bb2025/">changes</a>. At the time of writing, 214 issues have been identified!
+They made a great <a href="https://www.thenaf.net/wp-content/uploads/2026/01/NAF-FAQ-for-BB2025_v20260115_A4.pdf">summary</a> of the most important changes and clarifications.</p>
+<p>For a nice overview of changes per team / roster, check out the website of nazgob at <a href="https://2025.nazgob.co.uk/teams" class="uri">https://2025.nazgob.co.uk/teams</a></p>
+</div>
+<div id="the-first-tournaments-using-bb2025-rules" class="section level1">
+<h1>The first tournaments using BB2025 rules</h1>
+<p>Currently there are two main data sources with BB2025 games: The NAF database and Tourplay.
+The nice thing about Tourplay is that it contains the actual rosters as well. Here we only look at team choice, in a later blog post we zoom in on the actual rosters.
+As the Tourplay data underlying this post was scraped end of december 2025, we are looking at really the first few weeks of BB2025 tournament play.
+The data largely consist of small scale local tournaments, with 10-20 coaches, and were not NAF approved.
+The biggest tournament was a UK tournament called “Yorkshire’mas Bowl II” , which was NAF registered, and used tiering.</p>
+<p>Here is an overview of the included tournaments.</p>
+<p><img src="/tournament_pop_third_season.png" /></p>
+</div>
+<div id="popular-team-picks" class="section level1">
+<h1>Popular team picks</h1>
+<p>So without further ado, the most popular races!</p>
+<p><img src="/roster_pop_third_season.png" />
+So in the first few weeks of BB2025, surprisingly <strong>Necromantic Horror</strong> was most popular.
+This could represent the risk-averse coaches playing it safe, as it already was a strong and popular team, and this team was virtually unchanged, with only small improvements, remaining a top pick.</p>
+<p>After that we have <strong>Shambling Undead</strong> , that did have significant changes, losing two Ghouls, their Blitzers gaining tackle, and zombies getting Eye gouge.</p>
+<p>Then we have <strong>Lizardmen</strong>, that did not see changes in positionals, but with Saurusses gaining juggernaut, and the team hit by the elite skill cap of max four of each (no more 6x block on all saurus), they’l likely play different enough to explain their initial popularity.</p>
+<p>On to <strong>Imperial Nobility</strong>, that got an overall boost in BB2025: Although bodyguards lost one movement, the teams cost is reduced, and they have various skill improvements (blitzers gaining pro, throwers gaining a new skill “give and go” as well as pro).</p>
+<p>Then comes <strong>Skaven</strong> that took a blow by losing two gutter runners, but were compensated by Blitzers gaining strip ball and an extra movement, and the remaining two gutter runners gaining stab.</p>
+<p>Always popular, we have <strong>Orcs</strong>, that also saw big changes: losing two blitzers and two big ’uns, and blitzers gaining Break tackle and the big ’uns gaining Mighty blow.</p>
+<p>(In the NAF data below, <strong>Orcs</strong> are now second most popular, only surpassed by <strong>OWA</strong>.)</p>
+<p><strong>OWA</strong>’s surge in popularity is also visible in the Tourplay data of the first few weeks.
+They have all sorts of improvements: gaining strong skills like Block and Tackle, losing Animosity, becoming cheaper overall, benefitting from the strength increase of the Human catcher, it is no surprise that everybody who like winning is looking at OWA.</p>
+<p>Then we have <strong>Wood Elf</strong>, that, although technically losing two catchers, already had a viable tournament roster in BB2020 with only two catchers. They benefit from cost reductions, catchers gaining <strong>sprint</strong> and improved passing across the board.</p>
+<p>Completing the top 10, we have <strong>Nurgle</strong>, <strong>Goblin</strong> and <strong>Bretonnian</strong>.
+Both <strong>Nurgle</strong> and <strong>Goblins</strong> are improved in various ways, and <strong>Bretonnian</strong> are of course brand new (although at first sight do not seem very strong).</p>
+</div>
+<div id="the-naf-database-after-two-months-of-bb2025-patterns-largely-confirmed" class="section level1">
+<h1>The NAF database after two months of BB2025: patterns largely confirmed</h1>
+<p>A few more weeks down the road, we can check the NAF database (10x more data roughly), and see how it compares.
+Comparing the top 10 most popular races in both datasets, we find that 8 of the 10 races are the same.
+Only <strong>Lizardmen</strong> has dropped substantially lower, and <strong>Humans</strong> make their appearance in the top 10.</p>
+<p><strong>Humans</strong> at first sight took a blow with losing two blitzers, but benefit from the strength increase of Catchers and the blitzers gaining Tackle.</p>
+<p><img src="/post/2026-01-24_third_season_roster_popularity_files/figure-html/unnamed-chunk-1-1.png" width="672" /></p>
+<p>Patterns we see are likely to change as tournaments move to new tiering systems, converge on how to deal with elite skills etc.
+For now we have a first taste of the impact of BB2025, and it sure shakes things up.</p>
+</div>

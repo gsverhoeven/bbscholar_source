@@ -1,7 +1,7 @@
 ---
 title: "Third Season team popularity"
 author: "Gertjan Verhoeven"
-date: "2025-12-21"
+date: "2026-01-24"
 summary: Blood Bowl Third Season (aka BB2025) is here! In this post, I look at tournament
   data from Tourplay and NAF to check what teams are popular in BB2025.
 slug: "first-bb2025-tournaments"
@@ -39,12 +39,12 @@ The biggest tournament was a UK tournament called  "Yorkshire'mas Bowl II" , whi
 
 Here is an overview of the included tournaments.
 
-![](tournament_pop_third_season.png)
+![](/tournament_pop_third_season.png)
 
 # Popular team picks
 So without further ado, the most popular races!
 
-![](roster_pop_third_season.png)
+![](/roster_pop_third_season.png)
 So in the first few weeks of BB2025, surprisingly **Necromantic Horror** was most popular.
 This could represent the risk-averse coaches playing it safe, as it already was a strong and popular team, and this team was virtually unchanged, with only small improvements, remaining a top pick.
 
