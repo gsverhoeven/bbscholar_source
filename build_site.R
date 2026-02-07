@@ -93,7 +93,8 @@ options(blogdown.hugo.version = "0.63.0")
 #blogdown:::build_rmds("content/post/2024-01-15-stan_in_azure_vm.Rmd")
 #blogdown:::build_rmds("content/post/2024-08-01_fumbbl_replays_blog_post.Rmd")
 #blogdown:::build_rmds("content/post/2025-04-29_fumbbl_league_team_development.Rmd")
-blogdown:::build_rmds("content/post/2026-01-24_third_season_roster_popularity.Rmd")
+#blogdown:::build_rmds("content/post/2026-01-24_third_season_roster_popularity.Rmd")
+blogdown:::build_rmds("content/post/2026-01-30_welsh_nationals_roster_analysis.Rmd")
 # rebuild site
 
 #The function blogdown::build_site() has an argument local that defaults to FALSE, which means building the website for publishing instead of local previewing

@@ -1,0 +1,168 @@
+---
+title: "Welsh Nationals BB2025 roster analysis"
+author: "Gertjan Verhoeven"
+date: "2026-01-30"
+summary: The Welsh Nationals 2026 were the first big high stakes UK tournament using Third Season (BB2025) rules. Lets have a look at the rosters!
+slug: "welsh-nationals-roster-analysis"
+draft: false
+categories:
+- Data science
+- Blood Bowl
+tags:
+- Python
+- Selenium
+baseurl: https://gsverhoeven.github.io
+header:
+  image: headers/bb_gnome_banner.png
+  preview: false
+---
+
+Blood Bowl Third Season (aka BB2025) is here! 
+
+In this post, I look at tournament roster data from Tourplay, in particular **The Welsh Nationals 2026**.
+This was the first big high stakes UK tournament using Third Season (BB2025) rules.
+
+A lot of flat tiering tourneys are currently happening, i.e. REVA Bowl, and Dutch Open 2026.
+
+According to the organizers (https://bloodbowlwales.co.uk/tournament/welsh-national-championships-2026-results/),
+
+*Flat tiering was used throughout the tournament to help gauge how teams perform under the updated ruleset and to give valuable insight into balance, roster choices and skill effectiveness going forward.*
+
+And:
+
+*For full standings, match results and stats, check out the Tourplay page: https://tourplay.net/en/blood-bowl/welsh-national-championship-2026*
+
+# The details of the ruleset
+
+The ruleset was indeed as flat as a ruleset can be, without any race specific rules or exceptions whatsever.
+```
+Team building:
+Coaches will have 1,150k gold and 7 skill points (SP) with which to build their teams. 
+Gold can be spent on players, sideline staff, and inducements.
+
+Inducements can be anything from the core rulebook, excluding Wizards, Mercenaries, Star Players, and Prayers to Nuffle.
+
+Each team will get a free Mascot, the Sheepy Reroll!
+
+Skill points grant a player one additional skill at the following costs:
+Primary Skill: 1 SP
+Secondary skill: 2 SP, one per team max
+
+There is a limit of 4 repeats for each Elite skill (Block, Dodge, Guard, Mighty Blow). 
+This does not include starting skills already present on a team.
+No player can receive more than one additional skill. (i.e. no stacking)
+
+High Elves may use the Team of Legend rules
+Slann are not permitted
+```
+
+So how did that work out?
+Lets have a look at the rosters!
+
+# Skewed race distribution
+
+The distribution of races was very skewed, with 75% of the rosters coming from only 9 races. Flat tiering likely contributed to this pattern. Hopefully this and other flat tiered tournaments will inform tiering systems so that future tournaments have a more diverse showing of the 30 races available.
+
+![](/roster_cumdist_welsh_nationals.png)
+
+# Popular team picks
+So without further ado, the top ten most popular races!
+
+![](/roster_pop_welsh_nationals.png)
+
+The top 10 races at the Welsh Nationals come as no surprise after our [previous blog post](https://bbscholar.netlify.app/post/first-bb2025-tournaments/), it largely reflects the general patterns in race popularity at NAF tournaments. 
+
+We will now have a look at 10 races, the top 6 most popular, 3 races that had at least one coach perform well at the tournament, and finally Tomb Kings because I want to play them soon.
+
+# 1. Old World Alliance (OWA) rosters
+
+Not only was OWA most popular, it was also most effective, with **first and second place going to OWA teams**. 
+
+What do the rosters look like? I boxed the top four OWA teams.
+
+![](/owa_welsh.png)
+So what do these four rosters have in common: 
+* All builds have three rerolls, most by utilizing a **leader** skill on either a human thrower or a dwarf runner. 
+* They all favor a **treeman** over an ogre, with Guard or Pro.
+* Mighty blow on the human blitzer, which gives the strong **tackle / mighty blow** combo. 
+* **Block on the S3 catcher**
+* **Guard** on the dwarf blitzer and troll slayer
+
+# 2. Necromantic Horror rosters
+
+Necro gets everything at 1150 + 7SP, so no surprises here. 3 rerolls, all positionals, Four guard, three block was the most common build and also the build that came in highest.
+
+![](/necro_welsh.png)
+Only variation is some coaches putting block on flesh golems.
+
+# 3. Wood Elves rosters
+
+![](/wood_elf_welsh.png)
+
+Here the choice is bringing a **tree** or not. Best scoring coaches all brought a tree. Comparing with my last [roster analysis three years ago done on EB2023 ruleset rosters](https://bbscholar.netlify.app/post/blood-bowl-eurobowl-rosters/), we see that the classic top Wood Elf roster is:
+
+* giving war dancers **tackle** and **strip ball**, 
+* a **tree**, 
+* **3 rerolls** (either with or without leader caddy) and 
+* putting **dodge and/or wrestle** on the linemen.
+
+What is new that the two catchers get skills, **sidestep** and **block**. Perhaps because block (and sidestep indirectly) offers a bit more protection for the catchers when only two can be fielded?
+
+# 4. Shambling Undead rosters
+
+![](/undead_welsh.png)
+Top performing coaches went for two builds, with either three rerolls and 14 players, or four rerolls with 13 players. 
+Either guard mummy or spending two SP for a block mummy. Guard and mighty blow wights. Block Ghouls.
+
+# 5. Skaven rosters
+
+![](/skaven_welsh.png)
+To my surprise, NO variation in team player composition. All coaches went for roger, two gutters, two blitzers, one thrower and 7 linerats. For a total of 13 players. Leader on the thrower. The top coach went for a really interesting build, putting **break tackle** on both (S3) blitzers. 
+
+# 6. Amazon rosters
+
+![](/amazon_welsh.png)
+For amazon quite some variation, with either zero, one or two throwers, but the top performers both went for standard rosters with two blitzers, one block one wrestle, two blockers, one had the two guard build, the other the block/guard build. Complemented with either 9 + keg or 10 linewomen and maxed on the elite skill block.
+
+# Less popular but high performing rosters
+
+Finally we can have a look at the top 20 coaches and which races they played.
+In the top 10, 8 rosters were already discussed above. Orc, Dark Elf, Lizardmen rosters also showed at least one coach with a strong performance.
+
+# Orc Rosters
+
+![](orc_welsh.png)
+Orcs took third place, so let's have a look at that roster.
+New in Third Season is Orc linemen having strength access on a primary.
+The top performing Orc coach went for maximum block and guard.
+3 rr, Troll, goblin, all positionals and 5 linemen, of which two guard.
+Block big uns, that come with mighty blow standard, two guard blitzers that come with block and break tackle.
+
+# Dark elf rosters
+
+![](dark_elf_welsh.png)
+A dark Elf roster took fourth place, which is interesting, because Dark Elves are generally considered to have taken a nerf with the loss of two blitzers. That roster went for full positionals, 6 linemen for a team of 12 players, and 3 rr. No apothecary.
+
+An interesting choice is having **Kick** on the roster. From the Tourplay data, we can see that the assassins made more than half of the touchdowns. That makes sense given these pieces are MV 7, and come with **Hit and Run**.
+
+# Lizardmen rosters
+
+Lizardmen are also interesting to have a look at. They were a popular choice, and at least one coach made into a shared fourth place on Match Points (WDL 4/1/1) so they did perform as well.
+
+![](lizardmen_welsh.png)
+With Block as an Elite skill maxed at 4, and Saurusses gaining Juggernaut, giving one saurus Frenzy is the obvious choice, creating a semi reliable frenzy blitz piece. Rounded of with 2 rr, a Guard kroxigor, and a tackle Saurus.
+
+# Tomb Kings rosters
+
+Finally, we also have a look at Tomb Kings, because this will be my next league team, and coach Blitzy chose Tomb Kings, who is a Blood Bowl phenomenon who won three Blood Bowl tournaments last year, including Thrudball 2025, with Chaos Dwarf and Nurgle, so he must obviously know what is good.
+
+![](tomb_kings_welsh.png)
+No surprises there: all positionals, 6 skellies for a roster of 12 players, 3 rr, a 50/50 mix of Mighty Blow and Guard for the tomb guardians, a guard blitzer and a tackle blitzer. and a block thrower.
+
+# To conclude
+
+A rosterbook containing all 98 rosters was made with the R package `bbrosterplots` and is available as a PDF at insert_url_here.
+
+
+
+
