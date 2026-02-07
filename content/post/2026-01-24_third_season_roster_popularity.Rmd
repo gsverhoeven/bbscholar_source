@@ -34,7 +34,7 @@ For a nice overview of changes per team / roster, check out the website of nazgo
 Currently there are two main data sources with BB2025 games: The NAF database and Tourplay.
 The nice thing about Tourplay is that it contains the actual rosters as well. Here we only look at team choice, in a later blog post we zoom in on the actual rosters.
 As the Tourplay data underlying this post was scraped end of december 2025, we are looking at really the first few weeks of BB2025 tournament play.
-The data largely consist of small scale local tournaments, with 10-20 coaches, and were not NAF approved.
+The data largely consist of small scale local tournaments, with 10-20 coaches, several of which were not NAF approved.
 The biggest tournament was a UK tournament called  "Yorkshire'mas Bowl II" , which was NAF registered, and used tiering.
 
 Here is an overview of the included tournaments.
