@@ -1,7 +1,7 @@
 ---
 title: "Welsh Nationals BB2025 roster analysis"
 author: "Gertjan Verhoeven"
-date: "2026-01-30"
+date: "2026-02-13"
 summary: The Welsh Nationals 2026 were the first big high stakes UK tournament using
   Third Season (BB2025) rules. Lets have a look at the rosters!
 slug: "welsh-nationals-roster-analysis"
