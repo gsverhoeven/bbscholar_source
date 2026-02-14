@@ -64,7 +64,7 @@ Lets have a look at the rosters!
 
 The distribution of races was very skewed, with 75% of the rosters coming from only 9 races. Flat tiering likely contributed to this pattern. Hopefully this and other flat tiered tournaments will inform tiering systems so that future tournaments have a more diverse showing of the 30 races available.
 
-![](rosters_welsh_nationals/roster_cumdist_welsh_nationals.png)
+![](/post/rosters_welsh_nationals/roster_cumdist_welsh_nationals.png)
 
 The top 10 races at the Welsh Nationals come as no surprise after our [previous blog post](https://bbscholar.netlify.app/post/first-bb2025-tournaments/), it largely reflects the general patterns in race popularity at NAF tournaments. 
 
@@ -76,7 +76,7 @@ Not only was OWA most popular, it was also most effective, with **first and seco
 
 What do the rosters look like? I boxed the top four OWA teams.
 
-![](rosters_welsh_nationals//owa_welsh.png)
+![](/post/rosters_welsh_nationals//owa_welsh.png)
 So what do these four rosters have in common: 
 
 * All builds have three rerolls, most by utilizing a **leader** skill on either a human thrower or a dwarf runner. 
@@ -89,12 +89,12 @@ So what do these four rosters have in common:
 
 Necro gets everything at 1150 + 7SP, so no surprises here. 3 rerolls, all positionals, Four guard, three block was the most common build and also the build that came in highest (6th place, by coach camelchops).
 
-![](rosters_welsh_nationals//necro_welsh.png)
+![](/post/rosters_welsh_nationals//necro_welsh.png)
 Only variation is some coaches putting block on flesh golems.
 
 # 3. Wood Elves rosters
 
-![](rosters_welsh_nationals//wood_elf_welsh.png)
+![](/post/rosters_welsh_nationals//wood_elf_welsh.png)
 
 Here the choice is bringing a **tree** or not. Best scoring coaches all brought a tree. Comparing with my last [roster analysis three years ago done on EB2023 ruleset rosters](https://bbscholar.netlify.app/post/blood-bowl-eurobowl-rosters/), we see that the classic top Wood Elf roster is:
 
@@ -109,7 +109,7 @@ What is new that the two catchers get skills, **sidestep** and **block**. Perhap
 
 # 4. Shambling Undead rosters
 
-![](rosters_welsh_nationals//undead_welsh.png)
+![](/post/rosters_welsh_nationals//undead_welsh.png)
 Top performing coaches went for two builds:
 
 * three rerolls and 14 players, 
@@ -119,14 +119,14 @@ Skill wise: Either guard mummy or spending two SP for a block mummy. Guard and m
 
 # 5. Skaven rosters
 
-![](rosters_welsh_nationals//skaven_welsh.png)
+![](/post/rosters_welsh_nationals//skaven_welsh.png)
 To my surprise, NO variation in team player composition. All coaches went for roger, two gutters, two blitzers, one thrower and 7 linerats. For a total of 13 players. Leader on the thrower. 
 
 The top coach went for a really interesting build, putting **break tackle** on both (S3) blitzers, giving these a +1 on their dodges, making these pieces more similar to a gutter runner. 
 
 # 6. Amazon rosters
 
-![](rosters_welsh_nationals//amazon_welsh.png)
+![](/post/rosters_welsh_nationals//amazon_welsh.png)
 For amazon quite some variation, with either zero, one or two throwers, but the top performers both went for the standard roster: 
 
 * 3 rerolls
@@ -139,18 +139,18 @@ For amazon quite some variation, with either zero, one or two throwers, but the 
 
 The chaos Dwarves were popular, but did not perform too well at the Welsh Nationals tournament. So I refrained from singling out a particular build or roster, and we just have a look at the variation here. And there is plenty of that. Either with or without mino, with or without stabba's, with or without flamesmiths. 
 
-![](rosters_welsh_nationals/chorf_welsh.png)
+![](/post/rosters_welsh_nationals/chorf_welsh.png)
 
 # 8. Lizardmen rosters
 
 Lizardmen are also interesting to have a look at. They were a popular choice, and at least one coach made into a shared fourth place on Match Points (WDL 4/1/1) so they did perform as well.
 
-![](rosters_welsh_nationals/lizardmen_welsh.png)
+![](/post/rosters_welsh_nationals/lizardmen_welsh.png)
 With Block as an Elite skill maxed at 4, and Saurusses gaining Juggernaut, giving one saurus Frenzy is the obvious choice, creating a semi reliable frenzy blitz piece. Rounded of with 2 rr, a Guard kroxigor, and a tackle Saurus.
 
 # 9. Orc Rosters
 
-![](rosters_welsh_nationals/orc_welsh.png)
+![](/post/rosters_welsh_nationals/orc_welsh.png)
 Orcs took third place, so let's have a look at that roster.
 New in Third Season is Orc linemen having strength access on a primary.
 
@@ -169,7 +169,7 @@ With respect to skill choice, both block and guard are popular:
 
 # 10. Nurgle rosters
 
-![](rosters_welsh_nationals/nurgle_welsh.png)
+![](/post/rosters_welsh_nationals/nurgle_welsh.png)
 As with Chaos Dwarves, no Nurgle roster ended up in the top 20, so no highlighting of particular builds, we just have a look at roster variation. 
 
 There were a lot of similarities in the rosters:
@@ -183,7 +183,7 @@ One coach went for the new **Monstrous Mouth** mutation skill, that allows playe
 
 # 11. Dark elf rosters
 
-![](rosters_welsh_nationals/dark_elf_welsh.png)
+![](/post/rosters_welsh_nationals/dark_elf_welsh.png)
 
 A dark Elf roster took fourth place, which is interesting, because Dark Elves are generally considered to have taken a nerf with the loss of two blitzers.  
 So what rosters do we have?
@@ -193,7 +193,7 @@ First off all, it is noteworthy that no coach took any **Runners**. Not even as 
 In contrast, two out of three rosters took two Assassins. 
 Let's compare the two positionals:
 
-![](rosters_welsh_nationals/dark_elf_positionals.png)
+![](/post/rosters_welsh_nationals/dark_elf_positionals.png)
 
 They have equal stat lines, except for passing (3+ vs 4+), similar cost (80 vs 90K) but differ greatly in their skills, and skill access (with Assassins not having primary access to general skills). 
 
@@ -214,7 +214,7 @@ Finally, a surprising choice is having **Kick** on the roster. Not something I h
 
 Finally, we also have a look at Tomb Kings, because this will be my next league team, and up and coming coach *Blitzy* chose Tomb Kings for this tournament. *Blitzy* is a Blood Bowl phenomenon who won three Blood Bowl tournaments last year, including Thrudball 2025, with Chaos Dwarf and Nurgle, so he must obviously know what is good :)
 
-![](rosters_welsh_nationals/tomb_kings_welsh.png)
+![](/post/rosters_welsh_nationals/tomb_kings_welsh.png)
 
 No surprises there: 
 
@@ -226,7 +226,9 @@ Regarding skill choice: a 50/50 mix of **Mighty Blow** and **Guard** for the tom
 
 # To conclude
 
-A rosterbook containing all 98 rosters was made with the R package `bbrosterplots` and is available as a PDF at [](insert_url_here).
+A rosterbook containing all 98 rosters was made with the [R package `bbrosterplots`](https://github.com/gsverhoeven/bbrosterplots) and is available as a PDF [here](/post/rosters_welsh_nationals/roster_book_welsh_nationals.pdf).
+
+
 
 
 
