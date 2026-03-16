@@ -37,7 +37,7 @@ Let me know if you spot any mistakes.
 
 # Download section
 
-The updated Throw Teammate Flowchart for BB2025 can be downloaded [here](/post/throw_teammate_flowchart/ttm/TTM Chart for BB2025.pdf) and the SVG source is available [here](/post/throw_teammate_flowchart/ttm/TTM Chart for BB2025.svg) if you want to tinker with it.
+The updated Throw Teammate Flowchart for BB2025 can be downloaded [here](/post/ttm/TTM Chart for BB2025.pdf) and the SVG source is available [here](/post/ttm/TTM Chart for BB2025.svg) if you want to tinker with it in Inkscape (I used version 1.2).
 
 Note, the text could only be exported as paths (i.e. vector shapes, curse you Google!), the SVG is now a mix of editable text and vector shapes. Be warned!
 
